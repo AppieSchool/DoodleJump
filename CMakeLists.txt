@@ -18,7 +18,7 @@ add_executable(main src/main.cpp
         src/Representation/Constants.h)
 
 add_subdirectory(src/GameLogic)
-target_include_directories(main PUBLIC GameLogic)
+target_include_directories(main PUBLIC src/GameLogic)
 
 
 target_link_libraries(main PRIVATE sfml-graphics Logic)

@@ -10,7 +10,6 @@
 
 class World {
 private:
-    std::vector<std::vector<int>> Grid;
     std::vector<Entity*> entityList;
 public:
     World();
