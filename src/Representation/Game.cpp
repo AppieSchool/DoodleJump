@@ -21,10 +21,6 @@ Game::~Game() {
 void Game::run() {
     // Main game loop
 
-    sf::Texture t;
-    t.loadFromFile("Textures/background.png");
-    sf::Sprite s(t);
-
     while (window->isOpen())
     {
         // Checking for the events
@@ -40,7 +36,6 @@ void Game::run() {
         }
 
         window->clear(sf::Color::White);
-        window->draw(s);
         window->display();
     }
 

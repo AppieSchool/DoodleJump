@@ -4,7 +4,10 @@
 
 #include "Random.h"
 
-Random::Random() = default;
+Random::Random(){
+    generator.seed(std::random_device{}());
+
+}
 
 Random::~Random() = default;
 
