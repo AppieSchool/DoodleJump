@@ -5,8 +5,7 @@
 #include "Random.h"
 
 Random::Random(){
-    generator.seed(std::random_device{}());
-
+    generator.seed(std::random_device()());
 }
 
 Random::~Random() = default;
