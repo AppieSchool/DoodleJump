@@ -11,8 +11,6 @@ namespace Constant{
     inline uint32_t SCREENWIDTH = 640;
     inline uint32_t SCREENHEIGHT = 900;
     inline int FPS = 60;
-
-
 }
 
 #endif //DOODLEJUMP_CONSTANTS_H

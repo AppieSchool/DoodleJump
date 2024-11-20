@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.26)
-project(DoodleJump LANGUAGES CXX)
+project(DoodleJump)
+set(CMAKE_CXX_STANDARD 17)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
@@ -21,7 +22,7 @@ add_subdirectory(src/GameLogic)
 add_executable(main
         src/main.cpp
         src/Representation/Game.cpp
-        src/Representation/Constants.h
+        src/Representation/RepConsts.h
 )
 
 # Include Directories for GameLogic
@@ -29,6 +30,9 @@ target_include_directories(main PUBLIC src/GameLogic)
 
 # Link Libraries
 target_link_libraries(main PRIVATE sfml-graphics Logic)
+
+target_compile_features(main PRIVATE cxx_std_17)
+target_compile_features(Logic PRIVATE cxx_std_17)
 
 # Ensure Build Order
 add_dependencies(main Logic)
